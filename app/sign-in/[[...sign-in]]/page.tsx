@@ -5,7 +5,10 @@ export default function SignInPage() {
   return (
     <div className="flex justify-center px-6 py-12">
       <Suspense>
-        <SignIn />
+        <SignIn
+          fallbackRedirectUrl="/dashboard"
+          signUpFallbackRedirectUrl="/dashboard"
+        />
       </Suspense>
     </div>
   );
