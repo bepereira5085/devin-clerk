@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { appConfig } from "@/app.config";
 
 export function Header() {
@@ -11,9 +12,21 @@ export function Header() {
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/dashboard" className="hover:text-accent">
-            Dashboard
+            Painel
           </Link>
-          {/* AUTH CONTROLS GO HERE */}
+          <Show when="signed-out">
+            <SignInButton>
+              <button className="font-medium hover:text-accent">Entrar</button>
+            </SignInButton>
+            <SignUpButton>
+              <button className="rounded-full bg-accent px-4 py-2 font-medium text-white shadow-sm transition hover:opacity-90">
+                Criar conta
+              </button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
         </nav>
       </div>
     </header>
