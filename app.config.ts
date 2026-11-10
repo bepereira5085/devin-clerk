@@ -4,22 +4,40 @@ export type Feature = {
 };
 
 export const appConfig = {
-  name: "Your App",
-  description: "Describe your app in one sentence. Devin will fill this in.",
-  emoji: "🚀",
-  accent: "#7c3aed",
+  name: "EasyMoney",
+  description: "Um aplicativo de gestão financeira de gastos pessoais.",
+  emoji: "💰",
+  accent: "#059669",
   upcomingFeatures: [
     {
-      title: "Your first feature",
-      description: "What people will be able to do once it's built.",
+      title: "Registrar entradas e saídas",
+      description:
+        "Formulário para lançar um valor recebido ou gasto, com data e observação.",
     },
     {
-      title: "Your second feature",
-      description: "Devin will write this list based on your app idea.",
+      title: "Etiquetas nos lançamentos",
+      description:
+        "Crie tags como Alimentação, Transporte ou Aluguel e atribua uma a cada lançamento.",
     },
     {
-      title: "Your third feature",
-      description: "Each one is a good next prompt for Devin.",
+      title: "Histórico de lançamentos",
+      description:
+        "Lista dos lançamentos com filtro por tag e mês, com opção de editar ou excluir.",
+    },
+    {
+      title: "Resumo do mês",
+      description:
+        "Cards com o total de entradas, o total de saídas e o saldo do mês.",
+    },
+    {
+      title: "Gastos por tag",
+      description:
+        "Gráfico de pizza mostrando como os gastos se dividem entre as tags.",
+    },
+    {
+      title: "Entradas vs. saídas",
+      description:
+        "Gráfico de barras comparando entradas e saídas dos últimos 6 meses.",
     },
   ] satisfies Feature[],
 };
